@@ -48,7 +48,10 @@ const footer = await reader.singletons.footer.read();
     </section>
 
     <section class="contact">
-      <p class="charity">{footer?.charityText}</p>
+      <a href={footer?.charityUrl ?? 'https://u24.gov.ua'} target="_blank" rel="noopener" class="charity">
+        {footer?.charityText}
+      </a>
+      <p class="contact-label">{footer?.contactLabel}</p>
       <a href={`mailto:${footer?.contactEmail}`} class="contact-btn">Get in touch</a>
     </section>
   </main>
@@ -170,7 +173,16 @@ const footer = await reader.singletons.footer.read();
     align-items: center;
     gap: 2rem;
   }
-  .charity { color: var(--muted); font-size: 1rem; }
+  .charity {
+    color: var(--muted);
+    font-size: 1rem;
+    text-decoration: none;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 0.1em;
+    transition: color 0.2s;
+  }
+  .charity:hover { color: var(--text); }
+  .contact-label { color: var(--muted); font-size: 1rem; max-width: 400px; text-align: center; }
   .contact-btn {
     display: inline-block;
     background: var(--text);

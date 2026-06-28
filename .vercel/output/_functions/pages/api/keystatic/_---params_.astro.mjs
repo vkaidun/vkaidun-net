@@ -1,6 +1,6 @@
 import { makeGenericAPIRouteHandler } from '@keystatic/core/api/generic';
 import { parseString } from 'set-cookie-parser';
-import { k as keystaticConfig } from '../../../chunks/keystatic.config_D3qb-wSF.mjs';
+import { k as keystaticConfig } from '../../../chunks/keystatic.config_Dw9GPaEi.mjs';
 export { renderers } from '../../../renderers.mjs';
 
 function makeHandler(_config) {

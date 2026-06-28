@@ -14,7 +14,7 @@ export default config({
         title: fields.text({ label: 'Title' }),
         description: fields.text({ label: 'Description', multiline: true }),
         linkedinUrl: fields.url({ label: 'LinkedIn URL' }),
-        portfolioUrl: fields.url({ label: 'Portfolio URL' }),
+        portfolioUrl: fields.text({ label: 'Portfolio URL' }),
         behanceUrl: fields.url({ label: 'Behance URL' }),
       },
     }),
@@ -51,6 +51,8 @@ export default config({
       format: { data: 'yaml' },
       schema: {
         charityText: fields.text({ label: 'Charity message', multiline: true }),
+        charityUrl: fields.url({ label: 'Charity URL (United24)' }),
+        contactLabel: fields.text({ label: 'Contact CTA text', multiline: true }),
         contactEmail: fields.text({ label: 'Contact email' }),
       },
     }),
